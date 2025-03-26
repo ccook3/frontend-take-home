@@ -11,7 +11,7 @@ import {
 } from '@radix-ui/themes';
 import { User } from '../../types/User';
 import { formatDate } from '../../util/formatDate';
-import { API_BASE_URL, useRoles } from '../../hooks/api';
+import { API_BASE_URL, useRoles } from '../../services/api';
 import { mutate } from 'swr';
 import { Role } from '../../types/Role';
 

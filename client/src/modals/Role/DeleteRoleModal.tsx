@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Dialog, Flex, Text } from '@radix-ui/themes';
 import { Role } from '../../types/Role';
-import { API_BASE_URL } from '../../hooks/api';
+import { API_BASE_URL } from '../../services/api';
 import { mutate } from 'swr';
 
 const DeleteRoleModal: React.FC<any> = ({

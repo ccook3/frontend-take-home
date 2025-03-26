@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Dialog, Flex, Text } from '@radix-ui/themes';
 import { User } from '../../types/User';
-import { API_BASE_URL } from '../../hooks/api';
+import { API_BASE_URL } from '../../services/api';
 import { mutate } from 'swr';
 
 const DeleteUserModal: React.FC<any> = ({

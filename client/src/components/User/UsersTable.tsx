@@ -5,7 +5,7 @@ import DropDownMenu from './DropdownMenu';
 import { formatDate } from '../../util/formatDate';
 import { User } from '../../types/User';
 import PaginationButtons from '../PaginationButtons';
-import { useUsers } from '../../hooks/api';
+import { useUsers } from '../../services/api';
 import SkeletonTable from '../SkeletonTable';
 import { MagnifyingGlassIcon } from '@radix-ui/react-icons';
 import AddUserModal from '../../modals/User/AddUserModal';

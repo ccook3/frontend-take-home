@@ -1,7 +1,7 @@
 import React, { ChangeEvent, useEffect, useState } from 'react';
 import '@radix-ui/themes/styles.css';
 import { Box, Button, Flex, Table, TextField } from '@radix-ui/themes';
-import { useRoles } from '../../hooks/api';
+import { useRoles } from '../../services/api';
 import DropDownMenu from './DropdownMenu';
 import { MagnifyingGlassIcon } from '@radix-ui/react-icons';
 import SkeletonTable from '../SkeletonTable';

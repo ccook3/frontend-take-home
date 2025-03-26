@@ -9,7 +9,7 @@ import {
   TextField,
 } from '@radix-ui/themes';
 import { User } from '../../types/User';
-import { API_BASE_URL, useRoles } from '../../hooks/api';
+import { API_BASE_URL, useRoles } from '../../services/api';
 import { mutate } from 'swr';
 import { useForm } from 'react-hook-form';
 import { Role } from '../../types/Role';

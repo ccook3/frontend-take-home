@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Dialog, Flex, Text, TextField } from '@radix-ui/themes';
-import { API_BASE_URL } from '../../hooks/api';
+import { API_BASE_URL } from '../../services/api';
 import { mutate } from 'swr';
 import { useForm } from 'react-hook-form';
 import { Role } from '../../types/Role';

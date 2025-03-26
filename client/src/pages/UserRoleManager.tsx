@@ -7,11 +7,11 @@ import RolesTable from '../components/Role/RolesTable';
 // Catie's notes for optomization
 // High priority:
 // * add mobile functionality
-// * add tests for each endpoint
 // * add screenreader funcionality for all buttons / menu items
 // Medium priority:
 // * better UX on error handling
 // * add ability to upload or edit avatar image
+// * add empty state for search if search returns no results on tables
 const UserRoleManager: React.FC<any> = () => {
   return (
     <Tabs.Root defaultValue="user">
