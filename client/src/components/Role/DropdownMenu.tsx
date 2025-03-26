@@ -6,7 +6,8 @@ import { Role } from '../../types/Role';
 import EditRoleModal from '../../modals/Role/EditRoleModal';
 import DeleteRoleModal from '../../modals/Role/DeleteRoleModal';
 
-// Catie - Type checking isn't working properly on this parameter intake - it allowed me to pass in a role id, not the whole role
+// Catie - Type checking isn't working properly on this parameter intake
+// - it allowed me to pass in a role id, not the whole role
 const DropDownMenu: React.FC<any> = ({ role }: { role: Role }) => {
   const [openEditRoleModal, setOpenEditRoleModal] = useState(false);
   const [openDeleteRoleModal, setOpenDeleteRoleModal] = useState(false);

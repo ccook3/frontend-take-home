@@ -31,21 +31,17 @@ const UserTable: React.FC<any> = () => {
     return () => clearTimeout(timer);
   }, [searchText]);
 
-  // Catie - add error handling
   const { data, isLoading, error } = useUsers(currentPage, debouncedSearch);
   const users = data?.completeUsers;
 
   const handleSearchChange = (e: ChangeEvent<HTMLInputElement>) => {
     setSearchText(e.target.value);
-    // Reset to first page when searching
     setCurrentPage(1);
   };
 
   useEffect(() => {
     if (data) {
-      // Check if there are more pages
       setHasNextPage(data.pages > currentPage);
-      console.log('Data pages:', data.pages, 'Current page:', currentPage);
     }
   }, [data, currentPage]);
 
@@ -64,7 +60,6 @@ const UserTable: React.FC<any> = () => {
             </TextField.Slot>
           </TextField.Root>
         </Box>
-        {/* Catie - add functionality */}
         <Button
           color="iris"
           style={{ backgroundColor: 'var(--accent-9)' }}
@@ -93,7 +88,7 @@ const UserTable: React.FC<any> = () => {
 
             <Table.Body>
               {users?.map((user: User) => (
-                <Table.Row>
+                <Table.Row key="{user.id}">
                   <Table.Cell>
                     <Flex gap="2" align="center">
                       <Avatar

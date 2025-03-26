@@ -4,17 +4,29 @@ import { Tabs } from '@radix-ui/themes';
 import UserTable from '../components/User/UsersTable';
 import RolesTable from '../components/Role/RolesTable';
 
+// Catie's notes for optomization
+// High priority:
+// * add mobile functionality
+// * add tests for each endpoint
+// * add screenreader funcionality for all buttons / menu items
+// Medium priority:
+// * better UX on error handling
+// * add ability to upload or edit avatar image
 const UserRoleManager: React.FC<any> = () => {
   return (
     <Tabs.Root defaultValue="user">
-      <Tabs.List>
+      <Tabs.List
+        size={{
+          initial: '1',
+          xs: '1',
+        }}
+      >
         <Tabs.Trigger value="user">Users</Tabs.Trigger>
         <Tabs.Trigger value="role">Roles</Tabs.Trigger>
       </Tabs.List>
       <Tabs.Content value="user">
         <UserTable />
       </Tabs.Content>
-
       <Tabs.Content value="role">
         <RolesTable />
       </Tabs.Content>

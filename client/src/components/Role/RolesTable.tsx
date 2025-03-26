@@ -34,7 +34,6 @@ const RolesTable: React.FC<any> = () => {
     return () => clearTimeout(timer);
   }, [searchText]);
 
-  // Catie - add error handling
   const { data, isLoading, error } = useRoles(debouncedSearch);
   const roles = data?.data;
 
@@ -58,7 +57,6 @@ const RolesTable: React.FC<any> = () => {
             </TextField.Slot>
           </TextField.Root>
         </Box>
-        {/* Catie - add functionality */}
         <Button
           color="iris"
           style={{ backgroundColor: 'var(--accent-9)' }}
@@ -80,7 +78,6 @@ const RolesTable: React.FC<any> = () => {
             <Table.Header>
               <Table.ColumnHeaderCell>Name</Table.ColumnHeaderCell>
               <Table.ColumnHeaderCell>Description</Table.ColumnHeaderCell>
-              {/* Catie - add in screen reader label for actions */}
               <Table.ColumnHeaderCell />
             </Table.Header>
 
@@ -88,7 +85,6 @@ const RolesTable: React.FC<any> = () => {
               {roles?.map((role: RoleResponse) => (
                 <Table.Row key={role.id}>
                   <Table.RowHeaderCell>{role.name}</Table.RowHeaderCell>
-                  {/* Catie - add in max width or character cut off */}
                   <Table.Cell>{role.description}</Table.Cell>
                   <Table.Cell>
                     <DropDownMenu role={role} />

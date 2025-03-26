@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import {
+  Box,
   Button,
   Dialog,
   Flex,
@@ -98,23 +99,20 @@ const AddUserModal: React.FC<any> = ({
               <Text as="div" size="2" mb="1" weight="bold">
                 Role
               </Text>
-              {/* Catie - The width of this is not right yet */}
-              <Flex width="50%">
-                <Select.Root
-                  value={roleIdValue}
-                  onValueChange={(value) => setValue('roleId', value)}
-                  disabled={rolesLoading}
-                >
-                  <Select.Trigger />
-                  <Select.Content>
-                    {rolesData?.data.map((role: Role) => (
-                      <Select.Item key={role.id} value={role.id}>
-                        {role.name}
-                      </Select.Item>
-                    ))}
-                  </Select.Content>
-                </Select.Root>
-              </Flex>
+              <Select.Root
+                value={roleIdValue}
+                onValueChange={(value) => setValue('roleId', value)}
+                disabled={rolesLoading}
+              >
+                <Select.Trigger placeholder="Select role" />
+                <Select.Content>
+                  {rolesData?.data.map((role: Role) => (
+                    <Select.Item key={role.id} value={role.id}>
+                      {role.name}
+                    </Select.Item>
+                  ))}
+                </Select.Content>
+              </Select.Root>
             </label>
           </Flex>
 
