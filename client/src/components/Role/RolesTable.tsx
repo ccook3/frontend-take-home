@@ -61,6 +61,7 @@ const RolesTable: React.FC<any> = () => {
           color="iris"
           style={{ backgroundColor: 'var(--accent-9)' }}
           onClick={() => setOpenAddRoleModal(true)}
+          area-label="Add role"
         >
           + Add Role
         </Button>

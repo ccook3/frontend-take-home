@@ -70,7 +70,7 @@ const DeleteRoleModal: React.FC<any> = ({
         </Dialog.Description>
         <Flex gap="3" mt="4" justify="end">
           <Dialog.Close>
-            <Button variant="soft" color="gray">
+            <Button variant="soft" color="gray" area-label="Cancel">
               Cancel
             </Button>
           </Dialog.Close>
@@ -79,6 +79,7 @@ const DeleteRoleModal: React.FC<any> = ({
             variant="surface"
             disabled={isSubmitting}
             onClick={() => onSubmit()}
+            area-label="Delete role"
           >
             Delete role
           </Button>

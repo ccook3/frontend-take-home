@@ -26,12 +26,14 @@ const DropDownMenu: React.FC<any> = ({ user }: { user: User }) => {
           <DropdownMenu.Item
             shortcut="⌘ E"
             onClick={() => setOpenEditUserModal(true)}
+            area-label="Edit user"
           >
             Edit user
           </DropdownMenu.Item>
           <DropdownMenu.Item
             shortcut="⌘ D"
             onClick={() => setOpenDeleteUserModal(true)}
+            area-label="Delete user"
           >
             Delete user
           </DropdownMenu.Item>

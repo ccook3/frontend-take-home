@@ -146,11 +146,16 @@ const EditUserModal = ({
               color="gray"
               onClick={onClose}
               disabled={isSubmitting}
+              area-label="Cancel"
             >
               Cancel
             </Button>
 
-            <Button type="submit" disabled={isSubmitting}>
+            <Button
+              type="submit"
+              disabled={isSubmitting}
+              area-label={isSubmitting ? 'Saving...' : 'Save'}
+            >
               {isSubmitting ? 'Saving...' : 'Save'}
             </Button>
           </Flex>

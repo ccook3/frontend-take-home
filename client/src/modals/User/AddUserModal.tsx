@@ -123,11 +123,16 @@ const AddUserModal: React.FC<any> = ({
               color="gray"
               onClick={onClose}
               disabled={isSubmitting}
+              area-label="Cancel"
             >
               Cancel
             </Button>
 
-            <Button type="submit" disabled={isSubmitting}>
+            <Button
+              type="submit"
+              disabled={isSubmitting}
+              area-label={isSubmitting ? 'Saving...' : 'Add user'}
+            >
               {isSubmitting ? 'Saving...' : 'Add user'}
             </Button>
           </Flex>

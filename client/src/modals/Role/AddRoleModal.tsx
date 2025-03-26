@@ -92,11 +92,16 @@ const AddRoleModal: React.FC<any> = ({
               color="gray"
               onClick={onClose}
               disabled={isSubmitting}
+              area-label="Cancel"
             >
               Cancel
             </Button>
 
-            <Button type="submit" disabled={isSubmitting}>
+            <Button
+              type="submit"
+              disabled={isSubmitting}
+              area-label={isSubmitting ? 'Saving...' : 'Add role'}
+            >
               {isSubmitting ? 'Saving...' : 'Add role'}
             </Button>
           </Flex>

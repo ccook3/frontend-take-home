@@ -28,12 +28,14 @@ const DropDownMenu: React.FC<any> = ({ role }: { role: Role }) => {
           <DropdownMenu.Item
             shortcut="⌘ E"
             onClick={() => setOpenEditRoleModal(true)}
+            area-label="Edit role"
           >
             Edit role
           </DropdownMenu.Item>
           <DropdownMenu.Item
             shortcut="⌘ D"
             onClick={() => setOpenDeleteRoleModal(true)}
+            area-label="Delete role"
           >
             Delete role
           </DropdownMenu.Item>
