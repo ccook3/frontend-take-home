@@ -5,20 +5,24 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Theme } from '@radix-ui/themes';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { SWRConfig } from 'swr';
 
-const queryClient = new QueryClient();
+const rootElement = document.getElementById('root');
+if (!rootElement) throw new Error('Failed to find the root element');
+const root = ReactDOM.createRoot(rootElement);
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
 root.render(
   <React.StrictMode>
-    <QueryClientProvider client={queryClient}>
+    <SWRConfig
+      value={{
+        fetcher: (url) => fetch(url).then((res) => res.json()),
+        revalidateOnFocus: true,
+      }}
+    >
       <Theme accentColor="violet" grayColor="slate" scaling="100%">
         <App />
       </Theme>
-    </QueryClientProvider>
+    </SWRConfig>
   </React.StrictMode>
 );
 
