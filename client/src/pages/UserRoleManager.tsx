@@ -7,7 +7,9 @@ import RolesTable from '../components/Role/RolesTable';
 // Catie's notes for optomization
 // High priority:
 // * add mobile functionality
-// * add screenreader funcionality for all buttons / menu items
+// * add more accessibility coverage
+// * add success toast notificaitons
+
 // Medium priority:
 // * better UX on error handling
 // * add ability to upload or edit avatar image
