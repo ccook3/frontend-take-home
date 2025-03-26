@@ -5,6 +5,7 @@
 I built the wireframe with create react app - a more indepth (out of the box) description of how to run things is below in the "Getting Started with Create React App" section.
 
 - To run: npm start
+- To view in browser: `http://localhost:3000`
 - To test: npm test
 
 ## What I would inmprove
