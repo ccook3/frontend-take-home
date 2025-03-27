@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import '@radix-ui/themes/styles.css';
 import { Button, Flex, Text } from '@radix-ui/themes';
 

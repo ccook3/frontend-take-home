@@ -1,7 +1,7 @@
 import React from 'react';
 import '@radix-ui/themes/styles.css';
 import './App.css';
-import { Box, Container, Flex, Table, Tabs, Text } from '@radix-ui/themes';
+import { Container } from '@radix-ui/themes';
 import UserRoleManager from './pages/UserRoleManager';
 
 function App() {

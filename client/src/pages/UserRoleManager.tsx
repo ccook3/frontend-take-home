@@ -1,4 +1,4 @@
-import React, { useState, ChangeEvent } from 'react';
+import React from 'react';
 import '@radix-ui/themes/styles.css';
 import { Tabs } from '@radix-ui/themes';
 import UserTable from '../components/User/UsersTable';
